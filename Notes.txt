@@ -1,0 +1,13 @@
+1. JSX is a set of instructions that tell react what content we want to show on the screen.
+2. The App.JS produces JSX and handles user events.
+3. React knows how to work with components.
+4. ReactDOM knows how to take instructions on what we want to show and turn into HTML.
+5. Babel translates any JS version to ES5 so that it can be easily supported by any browser.
+6. While creating an react app, the package.json file is being created at first.
+7. If localhost:3000 dosent work visit On Your Network.
+8. import statement is used for ES2015 modules whereas require statement is used for common JS modules.
+9. The major difference between require and import, is that require will automatically
+   scan node_modules to find modules, but import, which comes from ES6, won't.
+10. for and id in html allows us to click on the label and automatically select the input.
+11. JSX can display everything in curly braces but not objects.
+12. 
