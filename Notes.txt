@@ -1,3 +1,4 @@
+Basics and JSX -
 1. JSX is a set of instructions that tell react what content we want to show on the screen.
 2. The App.JS produces JSX and handles user events.
 3. React knows how to work with components.
@@ -10,4 +11,8 @@
    scan node_modules to find modules, but import, which comes from ES6, won't.
 10. for and id in html allows us to click on the label and automatically select the input.
 11. JSX can display everything in curly braces but not objects.
-12. 
+
+Props or Properties -
+12. Props is used to pass data from Parent component to a child component.
+13. The main goal of props is to customize and configure a child component.
+14. 
