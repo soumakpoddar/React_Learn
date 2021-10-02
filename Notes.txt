@@ -18,3 +18,10 @@ Props or Properties -
 14. We can also pass components as props by creating <></> tags and passing the component inside those
     tags and we can access it in the child as props.children.
 15. Check components repo for that.
+
+States -
+16. Only usable with class based components.
+17. State is a JS object that contains data relevant to a component.
+18. Updating state causes the component to instantly re-render.
+19. State can be only updated using setState() function.
+20. Initialize States in constructor as it is the first method to load in automatically.
