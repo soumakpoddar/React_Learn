@@ -1,22 +1,14 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 class App extends React.Component{
-    constructor(props){
-        //calling base class ie. React Constructor...
-        super(props);
+    state={lat:null, errorMessage:''};
 
-        this.state={lat: null, errorMessage:''};
-
-        //we moved this location method here as we need to call it only once but if we put this under
-        //render then it will be called multiple times which will slow down our app.
+    componentDidMount(){
         window.navigator.geolocation.getCurrentPosition(
-            (position) => {
-                this.setState({lat: position.coords.latitude});
-            },
-            (err) => {
-                this.setState({errorMessage: err.message})
-            }
+            (position) => this.setState({lat: position.coords.latitude}),
+            (err) => this.setState({errorMessage: err.message})
         );
     }
 
@@ -28,7 +20,7 @@ class App extends React.Component{
         
         if(!this.state.errorMessage && this.state.lat)
             return(
-                <div>Latitude: {this.state.lat}</div>
+                <SeasonDisplay lat={this.state.lat} />
             )
         
         return(

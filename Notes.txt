@@ -13,15 +13,26 @@ Basics and JSX -
 11. JSX can display everything in curly braces but not objects.
 
 Props or Properties -
-12. Props is used to pass data from Parent component to a child component.
-13. The main goal of props is to customize and configure a child component.
-14. We can also pass components as props by creating <></> tags and passing the component inside those
+1. Props is used to pass data from Parent component to a child component.
+2. The main goal of props is to customize and configure a child component.
+3. We can also pass components as props by creating <></> tags and passing the component inside those
     tags and we can access it in the child as props.children.
-15. Check components repo for that.
+4. Check components repo for that.
 
 States -
-16. Only usable with class based components.
-17. State is a JS object that contains data relevant to a component.
-18. Updating state causes the component to instantly re-render.
-19. State can be only updated using setState() function.
-20. Initialize States in constructor as it is the first method to load in automatically.
+1. Only usable with class based components.
+2. State is a JS object that contains data relevant to a component.
+3. Updating state causes the component to instantly re-render.
+4. State can be only updated using setState() function.
+5. Initialize States in constructor as it is the first method to load in automatically.
+
+Component Lifecycle -
+1. A component lifecycle method is a function defined inside of our class based component.
+2. If we decide to implement these methods they will be called automatically by React at 
+   certain points during the component lifecycle.
+3. componentDidMount() -> A good place to do one time data loading.
+   Shows its stuff only once during loading...
+4. componentDidUpdate() -> A good place to do more data loading when props or state change.
+   Called up automatically during updation of stuffs.Before this is called render method is
+   called automatically to update and show stuffs.
+5. componentDidUnmount() -> Good place to do cleanup especially for non-react stuff.
