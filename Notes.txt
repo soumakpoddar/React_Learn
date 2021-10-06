@@ -18,6 +18,9 @@ Props or Properties -
 3. We can also pass components as props by creating <></> tags and passing the component inside those
     tags and we can access it in the child as props.children.
 4. Check components repo for that.
+5. There are default props which can set the default behaviour of our application. This can be accessed
+   by using App.defaultProps={} and passing the default props in this onject. Check Spinner component
+   inside seasons for more details.
 
 States -
 1. Only usable with class based components.
@@ -36,3 +39,19 @@ Component Lifecycle -
    Called up automatically during updation of stuffs.Before this is called render method is
    called automatically to update and show stuffs.
 5. componentDidUnmount() -> Good place to do cleanup especially for non-react stuff.
+
+Handling User Inputs -
+1. While passing a onInputChange function in input tag do not give ().
+2. In controlled inputs we store information inside the components. In uncontrolled inputs, we store
+   information inside HTML DOM.
+3. event.preventDefault() is used to stop the form from being submitting on its own.
+4. To handle form submit do with arrow function.
+
+** For communicating Parent to Children we can use the props system. But for Children to Parent we can
+   use a handler function in the Parent class and pass that function as a prop to child class. In the
+   child class's handler function we call that function using this.props.parent_handler() and pass the
+   value we want to send to parent class. Check app.js and searchbar.js of pics for more details.
+
+Async and Await -
+Use Async in front of method name and await in front of data fetching. See app.js of pics.
+
