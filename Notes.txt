@@ -55,3 +55,11 @@ Handling User Inputs -
 Async and Await -
 Use Async in front of method name and await in front of data fetching. See app.js of pics.
 
+** To render list of elements using map function use key as it improves the rendering performance of
+   react. Check imagelist.js in pics. Also always add the key to the root element.
+
+React Ref -
+1. They give access to a single DOM element.
+2. We create refs in the constructor, assign them to instance variables, then pass to a particular JSX
+   element as props.
+
