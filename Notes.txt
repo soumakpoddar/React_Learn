@@ -66,3 +66,22 @@ React Ref -
 ** If we provide only a value to an input and not an onChange() handler we cannot change the value of the
    input.
 
+** For function based components when we want a callback function, if we dont call it by ()=> then the
+   function will be called instantly when we load the component and if we call it by ()=>, then the
+   function will be called on certain event.
+
+useEffect() -
+1. The useEffect() hook helps us to run some piece of code when some of the components have changed.
+2. We use useEffect() for the following causes
+   a. When the component is rendered for the first time only.
+   b. When the component is rendered for the first and whenever it rerenders.
+   c. When the component is rendered for the first and (whenever it rerenders and some piece of data
+      has changed).
+3. Types of useEffect() rendering -
+   a. [] -> run only at initial render.
+   b. nothing -> run at initial and after each render.
+   c. [data] -> run at initial and after every render if data has changed.
+
+** To save react from XSS attacks use dangerouslySetInnerHTML={{__html:value}} in the tag. Use it only when
+   some API send the result as HTML pattern.
+
